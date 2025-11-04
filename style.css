@@ -1,0 +1,736 @@
+:root {
+    --bg-color: #f9f9f9;
+    --accent-color: #007bff;
+    --border-color: black;
+    --hover-color: #289363;
+    --text-color: #424242;
+}
+
+.dark {
+    --bg-color: #1d1d1d;
+    --accent-color: #289363;
+    --border-color: white;
+    --hover-color: #007bff;
+    --text-color: #e7e7e7;
+}
+
+/* Common style for every pages */
+
+body {
+    font-family: 'Sour Gummy', sans-serif;
+    scroll-behavior: smooth;
+    transition: 225ms;
+    background-color: var(--bg-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+header {
+    position: sticky;
+    top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 20px;
+}
+
+h1,
+h2,
+p,
+ul {
+    cursor: default;
+}
+
+article {
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 9px;
+    padding-left: 15px;
+    text-align: start;
+    height: 30px;
+}
+
+aside {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+textarea {
+    resize: none;
+}
+
+footer p {
+    text-align: center;
+    margin-top: 10%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--text-color);
+}
+
+.logo-text {
+    color: var(--accent-color);
+    background-color: transparent;
+    padding: 5px 10px;
+    font-weight: 700;
+    border: 3px solid var(--border-color);
+    border-radius: 10px 10px 35px 35px;
+    font-size: 30px;
+
+}
+
+.logo-text:hover {
+    color: var(--hover-color);
+}
+
+.logo:hover {
+    color: var(--hover-color);
+    transition: 225ms;
+}
+
+.nav-ul {
+    list-style: none;
+    margin-block: 0;
+    padding-inline: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-item a {
+    width: max-content;
+    color: var(--accent-color);
+}
+
+.nav-item a:hover {
+    transition: 75ms;
+    color: var(--hover-color);
+}
+
+#switch {
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    display: block;
+    cursor: pointer;
+    width: 40px;
+}
+
+#switch:hover {
+    transition: 75ms;
+}
+
+
+
+/*||=========================||*/
+/*|| Styles for homepage.html || */
+/*\/=========================\/*/
+.hero {
+    width: 100%;
+    height: 45vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero h1 {
+    margin-block: 0;
+    font-size: 3em;
+    color: var(--text-color);
+}
+
+.hero p {
+    color: #8b8b8b;
+}
+
+.projects-container {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: center
+}
+
+.projects {
+    width: 25%;
+    border: 3px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-evenly;
+    color: var(--text-color);
+}
+
+.projects h2 {
+    margin-block: 0;
+    text-align: start;
+    padding-left: 15px;
+}
+
+.projects article:hover {
+    color: #a204e7;
+    transition: 150ms;
+    cursor: pointer;
+    display: block;
+}
+
+.last {
+    text-align: start;
+    padding-left: 15px;
+    border: 0;
+    padding-bottom: 0;
+}
+
+.work {
+    width: 40%;
+    border-top: 3px solid var(--border-color);
+    border-right: 3px solid var(--border-color);
+    border-bottom: 3px solid var(--border-color);
+}
+
+.work a {
+    color: var(--accent-color);
+    height: 24px;
+    display: block;
+    width: fit-content;
+}
+
+.work a:hover {
+    color: var(--hover-color);
+    font-size: 17px;
+    transition: 75ms;
+}
+
+.exp {
+    margin-bottom: 25px;
+    height: 20vh;
+    box-sizing: border-box;
+    color: var(--text-color);
+}
+
+.exp h2,
+.opensource h2,
+.education h2 {
+    padding-left: 25px;
+}
+
+.exp a,
+.opensource a,
+.education a {
+    padding-left: 25px;
+}
+
+.exp p,
+.opensource p,
+.education p {
+    padding-left: 25px;
+    margin-block: 0;
+}
+
+.opensource {
+    border-top: 3px solid var(--border-color);
+    color: var(--text-color);
+}
+
+.education {
+    width: 35%;
+    border-top: 3px solid var(--border-color);
+    border-right: 3px solid var(--border-color);
+    border-bottom: 3px solid var(--border-color);
+    color: var(--text-color);
+}
+
+.education ul {
+    list-style-position: inside;
+    list-style-type: '- ';
+    padding-inline-start: 25px;
+}
+
+.education ul li {
+    box-sizing: border-box;
+    height: 22px;
+    width: fit-content;
+}
+
+.education ul li:hover {
+    color: #a204e7;
+    cursor: pointer;
+    font-size: 16.75px;
+    transition: 75ms;
+}
+
+aside h2 {
+    text-align: center;
+    margin-top: 45px;
+    color: var(--text-color);
+}
+
+.wrap {
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+    margin-top: 20px;
+}
+
+.item {
+    border: 2px solid var(--border-color);
+    color: var(--text-color);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 2% 1.5%;
+}
+
+.item p {
+    margin-block-start: 0;
+}
+
+.item footer {
+    color: #8b8b8b;
+}
+
+.item:hover {
+    box-shadow: 0px 0px 2px 4px var(--hover-color);
+    transition: 125ms;
+    border: 2px solid var(--hover-color);
+}
+
+footer p {
+    color: var(--text-color);
+}
+
+
+
+
+/*||=========================||*/
+/*|| Styles for projects.html ||*/
+/*\/=========================\/*/
+.projects-box {
+    margin-left: 5%;
+}
+
+.projects-box h1 {
+    color: var(--text-color);
+}
+
+.projects-box ul {
+    padding-inline-start: 15px;
+    list-style-type: '>>>  ';
+    width: fit-content;
+}
+
+.title-projects {
+    color: var(--accent-color);
+    width: fit-content;
+}
+
+.title-projects:hover {
+    color: var(--hover-color);
+    cursor: pointer;
+    transition: 125ms;
+}
+
+.projects-item {
+    color: var(--text-color);
+    border-bottom: 3px solid var(--hover-color);
+}
+
+.title-item {
+    color: var(--accent-color);
+}
+
+
+/*||=========================||*/
+/*|| Styles for articles.html ||*/
+/*\/=========================\/*/
+
+.articles {
+    margin-left: 5%;
+}
+
+.articles h1 {
+    color: var(--text-color);
+}
+
+.articles ul {
+    padding-inline-start: 15px;
+    list-style-type: '>>>  ';
+    width: fit-content;
+    color: var(--text-color);
+}
+
+.articles-link {
+    text-decoration: none;
+    color: var(--accent-color);
+}
+
+.articles-link:hover {
+    color: var(--hover-color);
+    transition: 125ms;
+    cursor: pointer;
+}
+
+.articles li {
+    border-bottom: 3px solid var(--hover-color);
+}
+
+.articles a {
+    color: var(--accent-color);
+}
+
+
+/*||==========================||*/
+/*||  Styles for contact.html  ||*/
+/*\/==========================\/*/
+
+.contact {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact h1 {
+    color: var(--text-color);
+}
+
+.contact form {
+    margin-left: 0;
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    padding: 5% 5%;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+#name:focus-visible,
+#email:focus-visible,
+#message:focus-visible {
+    border: 2px solid transparent;
+    outline: 0;
+}
+
+.contact form input,
+.contact form textarea {
+    border: 2px solid var(--text-color);
+    margin: 5px 0 20px 0;
+    border-radius: 10px;
+    height: 40px;
+    width: 30vw;
+    font-family: 'Sour Gummy', sans-serif;
+}
+
+
+#btn {
+    background-color: var(--accent-color);
+    cursor: pointer;
+    font-weight: 500;
+    font-family: 'Sour Gummy', sans-serif;
+    width: 100%;
+    margin: 0 auto;
+    height: 60px;
+    border-radius: 10px;
+    color: var(--bg-color);
+}
+
+#btn:hover {
+    background-color: var(--accent-color);
+    color: var(--border-color);
+    transition: 125ms;
+}
+
+#btn:disabled {
+    cursor: not-allowed;
+    border-color: transparent;
+}
+
+#name[type="text"]:focus,
+#email[type="email"]:focus,
+#message[id="message"]:focus {
+    border: 2px solid transparent;
+    box-shadow: 0px 0px 10px 1px var(--hover-color);
+}
+
+#name::placeholder,
+#email::placeholder {
+    font-family: "Sour Gummy", sans-serif;
+    padding-left: 5px;
+}
+
+#message,
+#message::placeholder {
+    font-family: "Sour Gummy", sans-serif;
+    padding-left: 2px;
+    padding-top: 2px;
+}
+
+#name,
+#email {
+    padding-left: 5px;
+    font-family: 'Sour Gummy', sans-serif;
+}
+
+
+
+/*||===============||*/
+/*|| Media queries || */
+/*\/===============\/*/
+
+/* for mobile - portrait */
+@media (min-width: 320px) and (max-width: 480px) {
+    body {
+        margin: 0px;
+    }
+
+    header {
+        margin: 0;
+        padding: 10px 0;
+        align-items: flex-end;
+        flex-direction: column;
+        gap: 20px;
+        position: static;
+        background-color: var(--bg-color);
+        width: 95%;
+    }
+
+    article,
+    .last {
+        border-top: 2px solid var(--border-color);
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        justify-content: center;
+        border-bottom: none;
+        align-items: center;
+        padding: 10px 0;
+        display: flex;
+    }
+
+    .hero h1 {
+        text-align: center;
+        font-size: 2.25em;
+    }
+
+    .hero p {
+        font-size: .8em;
+    }
+
+    .projects-container {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        overflow-x: hidden;
+    }
+
+    .projects h2,
+    .work h2,
+    .exp h2,
+    .opensource h2 {
+        text-align: center;
+        padding-left: 0;
+        margin: 0;
+        padding: 20px 0;
+        color: var(--bg-color);
+        border-bottom: 2px solid var(--border-color);
+        background-color: var(--text-color);
+    }
+
+    .exp {
+        height: auto;
+        margin-bottom: 0;
+    }
+
+    .work {
+        width: 95%;
+        text-align: center;
+        border-top: 0;
+        border-left: 3px solid var(--border-color);
+        border-right: 3px solid var(--border-color);
+        border-bottom: 3px solid var(--border-color);
+    }
+
+    .education {
+        width: 95%;
+        border-top: 0;
+        border-left: 3px solid var(--border-color);
+        border-right: 3px solid var(--border-color);
+        border-bottom: 3px solid var(--border-color);
+    }
+
+    .education h2 {
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .education ul,
+    .education p {
+        padding-inline-start: 10px;
+    }
+
+    .projects,
+    .opensource {
+        width: 95%;
+        text-align: center;
+    }
+
+    .exp p,
+    .opensource p,
+    .education p {
+        text-align: start;
+        padding-left: 15px;
+    }
+
+    .exp a,
+    .opensource a,
+    .education a {
+        padding-left: 15px;
+    }
+
+    .exp-text {
+        background-color: var(--bg-color);
+        padding: 20px 0;
+    }
+
+    .exp-text p {
+        margin: 5px 0;
+    }
+
+    .opensource-text {
+        background-color: var(--bg-color);
+        padding: 20px 0;
+    }
+
+    .opensource a {
+        margin: 5px 0;
+    }
+
+    .wrap {
+        flex-direction: column;
+    }
+
+    .item {
+        padding: 15px 25px;
+    }
+
+    /*||=========================||*/
+    /*|| Media for projects.html ||*/
+    /*\/=========================\/*/
+    .projects-box {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .projects-box ul {
+        padding-inline-start: 15px;
+        list-style-type: '>>>  ';
+        width: fit-content;
+    }
+
+    .projects-box ul li {
+        border-bottom: 3px solid var(--hover-color);
+    }
+
+    .title-item {
+        color: var(--accent-color);
+    }
+
+
+    /*||=========================||*/
+    /*|| Media for articles.html ||*/
+    /*\/=========================\/*/
+
+    .articles {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .articles ul {
+        padding-inline-start: 15px;
+        list-style-type: '>>>  ';
+        width: fit-content;
+    }
+
+    .articles-link {
+        text-decoration: none;
+        color: var(--accent-color);
+    }
+
+
+    /*||==========================||*/
+    /*||  Media for contact.html  ||*/
+    /*\/==========================\/*/
+
+    .contact {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        overflow-x: hidden;
+    }
+
+    .contact form {
+        margin-left: 0;
+        display: flex;
+        flex-direction: column;
+        padding: 10% 15%;
+        border: none;
+        width: fit-content;
+    }
+
+    .contact form input,
+    .contact form textarea {
+        border: 2px solid var(--border-color);
+        margin: 5px 0 20px 0;
+        border-radius: 10px;
+        height: 40px;
+        width: 65vw;
+    }
+
+    #btn {
+        background-color: var(--accent-color);
+        cursor: pointer;
+        font-weight: 500;
+        font-family: 'Sour Gummy', sans-serif;
+        width: auto;
+        height: 60px;
+        margin: 0;
+        border-radius: 10px;
+        border: 2px solid var(--border-color);
+    }
+
+
+    #name[type="text"]:focus,
+    #email[type="email"]:focus,
+    #message[id="message"]:focus {
+        border: 2px solid var(--hover-color);
+        box-shadow: 0px 0px 10px 1px var(--hover-color);
+
+    }
+
+
+    #name::placeholder,
+    #email::placeholder {
+        font-family: "Sour Gummy", sans-serif;
+        padding-left: 5px;
+    }
+
+    #message,
+    #message::placeholder {
+        font-family: "Sour Gummy", sans-serif;
+        padding-left: 5px;
+        padding-top: 5px;
+    }
+
+    #name,
+    #email {
+        padding-left: 5px;
+        font-family: 'Sour Gummy', sans-serif;
+    }
+}
